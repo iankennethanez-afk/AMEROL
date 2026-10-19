@@ -1,16 +1,18 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-     <meta name="viewport" 
-        content="width=device-width,initial-scale=1.0">
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCT</title>
 
     <style>
-        
-        body{
-            font-family: Arial;
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             background: #f4cfff;
         }
@@ -19,232 +21,341 @@
             background: #6a0dad;
             color: white;
             text-align: center;
-            padding: 30px;
+            padding: 30px 15px;
         }
 
-        nav{
-            color: #4b087c;
-            padding: 25px;
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        nav {
+            padding: 20px 10px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        nav a{
+        nav a {
             background: #4b087c;
-            padding: 12px 25px;
-            margin: 5px;
-            display: inline-block;
+            padding: 12px 20px;
             border-radius: 20px;
             color: white;
             text-decoration: none;
-
+            display: inline-block;
+            transition: 0.3s;
+            font-size: 15px;
         }
 
         nav a:hover {
             background: #9b59b6;
+            transform: translateY(-3px);
         }
-
-         .content p{
-            font-size: 20px;
-            line-height: 1.6;
-            color: black;
-            text-align: center;
-        }
-
-        
 
         .container {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin: 55px;
-             display: grid;
-            grid-template-columns: repeat(4,1fr);
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 20px;
             padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-        
-        .product{
-            width: 280px;
-            padding: 15px;
 
+        .product {
+            min-width: 0;
+            padding: 15px;
             background: white;
-           
             border-radius: 10px;
             text-align: center;
-           
-        }
-        .product:hover{
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
             transition: 0.4s;
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba (0, 0, 0, 0.25);
         }
-        @media (max-width:760px;{
-             .nav {
-                  flex-direction : column;
-                  align-items : center;
-                  gap: 5px;
-             }
-             .container {
-                  flex-direction : column;
-                  padding : 10px;
-             }
-             .product {
-                  width :100%;
-                  }
 
-                   @media (max-width:460px;{
-             .nav{
-                  gap: 5px;
-             }
-            
-             .product-grid {
-                 grid-template-columns : 1fr;
-                  }
-       
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 200px;
+            height: 180px;
+            object-fit: contain;
+        }
+
+        .captions h2 {
+            font-size: 18px;
+            color: #4b087c;
+            overflow-wrap: anywhere;
+        }
+
+        .captions p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: black;
+        }
+
+        .captions h3 {
+            font-size: 20px;
+            color: #6a0dad;
+        }
+
+        .product button {
+            background: #6a0dad;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .product button:hover {
+            background: #9b59b6;
+        }
+
+        /* TABLET */
+        @media (max-width: 900px) {
+            .container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 15px;
+                padding: 15px;
+            }
+
+            nav {
+                gap: 8px;
+            }
+
+            nav a {
+                padding: 10px 15px;
+            }
+        }
+
+        /* CELLPHONE */
+        @media (max-width: 600px) {
+            header {
+                padding: 20px 10px;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            nav {
+                padding: 12px 8px;
+                gap: 6px;
+            }
+
+            nav a {
+                padding: 10px 12px;
+                margin: 2px;
+                font-size: 13px;
+            }
+
+            .container {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+                padding: 10px;
+            }
+
+            .product {
+                padding: 8px;
+                border-radius: 8px;
+            }
+
+            .product img {
+                height: 120px;
+            }
+
+            .captions h2 {
+                font-size: 14px;
+            }
+
+            .captions p {
+                font-size: 13px;
+            }
+
+            .captions h3 {
+                font-size: 15px;
+            }
+
+            .product button {
+                width: 100%;
+                padding: 9px 5px;
+                font-size: 12px;
+            }
+        }
+
+        /* GAMAY KAAYO NGA CELLPHONE */
+        @media (max-width: 360px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .product img {
+                height: 170px;
+            }
+
+            .captions h2 {
+                font-size: 17px;
+            }
+
+            .captions p {
+                font-size: 14px;
+            }
+
+            .captions h3 {
+                font-size: 18px;
+            }
+
+            .product button {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
+
 <body>
+
     <header>
         <h1>PRODUCT</h1>
     </header>
 
     <nav>
-        <a href="homepage.html">&#x1F3E0 HOME</a>
-        <a href="about.html">&#128712 ABOUT</a>
-        <a href="product.html">&#128230 PRODUCT</a>
-        <a href="contact.html">&#128222 CONTACT</a>
-        <a href="index.html"> LOGOUT</a>
-     </nav>
-     <div class="container">
-         <div class="product">
-            <img src="1.webp" alt="picture">
-         <div class="captions">
-         <h2>HONOR 400 Lite 5G</h2>
-         <p>Quality product.</p>
-         <h3>16,347.07</h3>
-         <button onclick="window.location.href='product1.html'">
-         View product
-         </button>
-         </div>
-         </div>
-        
-        
-         <div class="product">
-            <img src="3.webp" alt="picture">
-         <div class="captions">
-         <h2>HONOR X9c</h2>
-         <p>Quality product.</p>
-         <h3>17,139.00</h3>
-         <button onclick="window.location.href='product2.html'">
-         View product
-         </button>
-         </div>
-         </div>
-    
-    
-         <div class="product">
-            <img src="4.webp" alt="picture">
-         <div class="captions">
-         <h2>HONOR 600 Pro 5G</h2>
-         <p>Quality product.</p>
-         <h3>49,999.00</h3>
-         <button onclick="window.location.href='product3.html'">
-         View product 
-         </button>
-         </div>
-         </div>
-        
-        
-         <div class="product">
-            <img src="5.webp" alt="picture">
-         <div class="captions">
-         <h2> HONOR X9d 5G</h2>
-         <p>Quality product.</p>
-         <h3>22,999.00</h3>
-         <button onclick="window.location.href='product4.html'">
-         View product
-         </button>
-         </div>
-         </div>
-        
-        
-         <div class="product">
-            <img src="6.webp" alt="picture">
-         <div class="captions">
-         <h2> VIVO V40 LITE 5G</h2>
-         <p>Quality product.</p>
-         <h3>5,999.00</h3>
-         <button onclick="window.location.href='product4.html'">
-         View product
-         </button>
-         </div>
-         </div>
+        <a href="homepage.html">&#x1F3E0; HOME</a>
+        <a href="about.html">&#128712; ABOUT</a>
+        <a href="product.html">&#128230; PRODUCT</a>
+        <a href="contact.html">&#128222; CONTACT</a>
+        <a href="index.html">LOGOUT</a>
+    </nav>
 
-         
-         <div class="product">
-            <img src="7.webp" alt="picture">
-         <div class="captions">
-         <h2> OPPO A15 </h2>
-         <p>Quality product.</p>
-         <h3>2,999.00</h3>
-         <button onclick="window.location.href='product4.html'">
-         View product
-         </button>
-         </div>
-         </div>
+    <div class="container">
 
-         
-         <div class="product">
-            <img src="8.webp" alt="picture">
-         <div class="captions">
-         <h2> SAMSUNG GALAXY A57 5G</h2>
-         <p>Quality product.</p>
-         <h3>30,999.00</h3>
-         <button onclick="window.location.href='product4.html'">
-         View product
-         </button>
-         </div>
-         </div>
+        <div class="product">
+            <img src="1.webp" alt="HONOR 400 Lite 5G">
+            <div class="captions">
+                <h2>HONOR 400 Lite 5G</h2>
+                <p>Quality product.</p>
+                <h3>₱16,347.07</h3>
+                <button onclick="window.location.href='product1.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
 
-         
-         <div class="product">
-            <img src="9.webp" alt="picture">
-         <div class="captions">
-         <h2> SAMSUNG GALAXY A17</h2>
-         <p>Quality product.</p>
-         <h3>13,999.00</h3>
-         <button onclick="window.location.href='product4.html'">
-         View product
-         </button>
-         </div>
-         </div>
+        <div class="product">
+            <img src="3.webp" alt="HONOR X9c">
+            <div class="captions">
+                <h2>HONOR X9c</h2>
+                <p>Quality product.</p>
+                <h3>₱17,139.00</h3>
+                <button onclick="window.location.href='product2.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
 
-         
-         <div class="product">
-            <img src="10.webp" alt="picture">
-         <div class="captions">
-         <h2> V60 5G</h2>
-         <p>Quality product.</p>
-         <h3>5,999.00</h3>
-         <button onclick="window.location.href='product4.html'">
-         View product
-         </button>
-         </div>
-         </div>
+        <div class="product">
+            <img src="4.webp" alt="HONOR 600 Pro 5G">
+            <div class="captions">
+                <h2>HONOR 600 Pro 5G</h2>
+                <p>Quality product.</p>
+                <h3>₱49,999.00</h3>
+                <button onclick="window.location.href='product3.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
 
-         
-         <div class="product">
-            <img src="5.webp" alt="picture">
-         <div class="captions">
-         <h2> IPHONE 17 PRO MAX</h2>
-         <p>Quality product.</p>
-         <h3>70,999.00</h3>
-         <button onclick="window.location.href='product4.html'">
-         View product
-         </button>
-         </div>
-         </div></div>
-        
-      
+        <div class="product">
+            <img src="5.webp" alt="HONOR X9d 5G">
+            <div class="captions">
+                <h2>HONOR X9d 5G</h2>
+                <p>Quality product.</p>
+                <h3>₱22,999.00</h3>
+                <button onclick="window.location.href='product4.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="6.webp" alt="VIVO V40 LITE 5G">
+            <div class="captions">
+                <h2>VIVO V40 LITE 5G</h2>
+                <p>Quality product.</p>
+                <h3>₱5,999.00</h3>
+                <button onclick="window.location.href='product4.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="7.webp" alt="OPPO A15">
+            <div class="captions">
+                <h2>OPPO A15</h2>
+                <p>Quality product.</p>
+                <h3>₱2,999.00</h3>
+                <button onclick="window.location.href='product4.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="8.webp" alt="SAMSUNG GALAXY A57 5G">
+            <div class="captions">
+                <h2>SAMSUNG GALAXY A57 5G</h2>
+                <p>Quality product.</p>
+                <h3>₱30,999.00</h3>
+                <button onclick="window.location.href='product4.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="9.webp" alt="SAMSUNG GALAXY A17">
+            <div class="captions">
+                <h2>SAMSUNG GALAXY A17</h2>
+                <p>Quality product.</p>
+                <h3>₱13,999.00</h3>
+                <button onclick="window.location.href='product4.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="10.webp" alt="VIVO V60 5G">
+            <div class="captions">
+                <h2>VIVO V60 5G</h2>
+                <p>Quality product.</p>
+                <h3>₱5,999.00</h3>
+                <button onclick="window.location.href='product4.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="5.webp" alt="IPHONE 17 PRO MAX">
+            <div class="captions">
+                <h2>IPHONE 17 PRO MAX</h2>
+                <p>Quality product.</p>
+                <h3>₱70,999.00</h3>
+                <button onclick="window.location.href='product4.html'">
+                    View Product
+                </button>
+            </div>
+        </div>
+
+    </div>
+
 </body>
 </html>
