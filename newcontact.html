@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <meta charset=”UTF-8”>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <title>ByteZone – Contact</title>
+</head>
+
+<body style=”margin:0; font-family:Arial,sans-serif; background:#0b1120; color:white;”>
+
+    <script>
+        If (sessionStorage.getItem(“loggedIn”) !== “true”) {
+            Window.location.replace(“login.html”);
+        }
+    </script>
+
+    <nav style=”background:#111827; padding:20px; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:20px;”>
+
+        <a href=”home.html” style=”color:white; text-decoration:none;”>Home</a>
+
+        <a href=”products.html” style=”color:white; text-decoration:none;”>Products</a>
+
+        <a href=”about.html” style=”color:white; text-decoration:none;”>About</a>
+
+        <a href=”contact.html” style=”color:#60a5fa; text-decoration:none;”>Contact</a>
+
+        <a href=”logout.html” style=”background:#dc2626; color:white; padding:8px 14px; border-radius:5px; text-decoration:none;”>Log Out</a>
+
+    </nav>
+
+    <main style=”width:90%; max-width:600px; margin:45px auto;”>
+
+        <h1 style=”text-align:center; color:#60a5fa;”>
+            Contact Us
+        </h1>
+
+        <form id=”contactForm” style=”background:#111827; border:1px solid #334155; padding:30px; border-radius:12px; margin-top:30px;”>
+
+            <label for=”name”>Full Name</label>
+
+            <input
+                Type=”text”
+                Id=”name”
+                Required
+                Placeholder=”Enter your name”
+                Style=”width:100%; padding:12px; box-sizing:border-box; margin:10px 0 20px; background:#020617; color:white; border:1px solid #475569; border-radius:6px;”
+            >
+
+            <label for=”email”>Email Address</label>
+
+            <input
+                Type=”email”
+                Id=”email”
+                Required
+                Placeholder=”Enter your email”
+                Style=”width:100%; padding:12px; box-sizing:border-box; margin:10px 0 20px; background:#020617; color:white; border:1px solid #475569; border-radius:6px;”
+            >
+
+            <label for=”message”>Message</label>
+
+            <textarea
+                Id=”message”
+                Required
+                Placeholder=”Write your message”
+                Style=”width:100%; height:130px; padding:12px; box-sizing:border-box; margin:10px 0 20px; background:#020617; color:white; border:1px solid #475569; border-radius:6px; resize:vertical;”
+            ></textarea>
+
+            <button type=”submit” style=”width:100%; padding:13px; background:#2563eb; color:white; border:none; border-radius:6px; cursor:pointer;”>
+                Send Message
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer style=”background:#111827; text-align:center; padding:20px; color:#94a3b8;”>
+        &copy; 2026 ByteZone Computer Shop
+    </footer>
+
+    <script>
+        Document.getElementById(“contactForm”)
+            .addEventListener(“submit”, function(event) {
+
+                Event.preventDefault();
+
+                Alert(
+                    “Thank you for contacting ByteZone!\n\n” +
+                    “This is a demo form. Your message was not sent.”
+                );
+
+                This.reset();
+            });
+    </script>
+
+</body>
+</html>

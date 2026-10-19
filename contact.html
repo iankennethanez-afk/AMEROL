@@ -1,0 +1,78 @@
+        <!DOCTYPE html>
+<html>
+<head>
+
+    <title>Contact</title>
+
+    <style>
+        
+        body{
+            font-family: Arial;
+            margin: 0;
+            background: #f4cfff;
+        }
+
+       
+
+        nav{
+            color: #4b087c;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav a{
+            background: #4b087c;
+            padding: 12px 25px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+            background: #9b59b6;
+        }
+
+         .container {
+            display:grid;
+            font-size: 20px;
+            line-height: 1.6;
+            color: black;
+            text-align: center;
+            justify-content: center; 
+            gap:10px;           
+            width: 100%;
+            border: 2px solid #d9dfff;
+            border-radius: 10px;
+            height: fit-content;
+          }
+
+       
+        
+    </style>
+</head>
+<body>
+    
+
+    <nav>
+        <a href="homepage.html">BACK TO HOME</a>
+       
+    </nav>
+
+    <div class="container">
+       <h1>Message Us</h1>
+
+       <input type="text" placeholder="Your Name">
+       <input type="email" placeholder="Your email">
+       <textarea rows="S" placeholder="Your message"></textarea>
+
+       <button onclick="alert('message sent!')">
+        Send Message
+        
+       </button>
+        </div>
+        
+</body>
+</html>

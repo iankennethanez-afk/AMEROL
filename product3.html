@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product1</title>
+</head>
+<style> 
+body{
+            font-family: Arial;
+            margin: 0;
+            background: #f4cfff;
+            text-align: center;
+        }
+
+        header {
+            background: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav{
+            color: #4b087c;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav a{
+            background: #4b087c;
+            padding: 12px 25px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        nav a:hover {
+            background: #9b59b6;
+        }
+
+         .content p{
+            font-size: 20px;
+            line-height: 1.6;
+            color: black;
+            text-align: center;
+        }
+
+        footer {
+            background: #4b087c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 100px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 55px;
+        }
+        .product{
+            width: 280px;
+            padding: 15px;
+            background: black cyan;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+</style>
+<body>
+ <h1>HONOR 600 Pro 5G</h1>
+ <div class="container">
+ <div class="product">
+    <img src="4.webp" alt="product">
+    <br><br>
+    <p>Smartphone 12GB RAM 512GB NFC 7000mAh battery<br>
+    Dual SIM AI button Android 15 6.57-inch HD AMOLED display, a 
+    Snapdragon 8 Elite processor</p>
+    <h2>49,999.00</h2>
+    <button class="buy-btn" onclick="BuyNow()">
+    BuyNow
+     </button>
+ </div>
+</div>
+ <script>
+    function BuyNow(){
+        alert("Thank You for Purchasing")
+    }
+ </script>   
+</body>
+</html>
