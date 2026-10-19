@@ -78,8 +78,8 @@
             transform: translateY(-10px);
             box-shadow: 0 8px 20px rgba (0, 0, 0, 0.25);
         }
-        @media screen and (max-width:60px;{
-             nav {
+        @media (max-width:760px;{
+             .nav {
                   flex-direction : column;
                   align-items : center;
                   gap: 5px;
@@ -90,6 +90,16 @@
              }
              .product {
                   width :100%;
+                  }
+
+                   @media (max-width:460px;{
+             .nav{
+                  gap: 5px;
+             }
+            
+             .product-grid {
+                 grid-template-columns : 1fr;
+                  }
        
     </style>
 </head>
